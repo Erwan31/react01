@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const App = () => {
-  React.createElement('h1', {className:'title'},'hello world');
+  return <h1>Hello world!</h1>
 }
 
-ReactDOM.render(<App/>, document.querySelector('#root'));
+ReactDOM.render(<App/>, document.querySelector('root'));
