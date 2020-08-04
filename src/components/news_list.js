@@ -1,13 +1,19 @@
 import React from 'react';
 import NewsListItem from './news_list_item';
 
-const NewsList = () => {
+const NewsList = ({news}) => {
+
+    console.log(news);
+
     return(
-        <div>
-            Hello I am a news component
-            <NewsListItem/>
-        </div>
+        <>
+        {news.map( (item) =>
+            <NewsListItem item={item} key={item.id}/>
+            )
+        }
+        </>
     )
+
 }
 
 export default NewsList;

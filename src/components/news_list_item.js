@@ -1,10 +1,11 @@
 import React from 'react';
 
 
-const NewsListItem = () => {
+const NewsListItem = (props) => {
     return(
-        <div>
-            Hello I am a news item component
+        <div className="news_item">
+           <h3>{props.item.title}</h3>
+           <div>{props.item.feed}</div>
         </div>
     )
 }
