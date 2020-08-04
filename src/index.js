@@ -7,6 +7,7 @@ import './styles/styles.css'
 import Header from './components/header'
 import NewsList from './components/news_list'
 import JSON from './db.json'
+import Footer from './components/footer'
 
 function year () {
   const newDate = new Date();
@@ -18,7 +19,8 @@ class App extends Component {
     super();
 
     this.state = {
-      news: JSON
+      news: JSON,
+      footerText: 'I am a happy footer'
     }
   }
 
@@ -30,6 +32,7 @@ class App extends Component {
         <NewsList news={this.state.news} />
 
         <div>The date is { year()} </div>
+        <Footer footer={this.state.footerText}/>
       </div>
     )
   }

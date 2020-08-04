@@ -4,13 +4,16 @@ class Header extends React.Component {
 
     state = {
         title: 'The keyword are: ',
-        keywords: ''
+        keywords: '',
+        active: false,
     }
 
     inputChange(event) {
-        console.log(event.target.value);
+        const value = event.target.value === '' ? false : true;
+
 
         this.setState({
+            active: value,
             keywords: event.target.value
         })
     }
@@ -18,7 +21,7 @@ class Header extends React.Component {
     render(){
 
         return(
-            <header>
+            <header style={{background: `${this.state.active ? 'red' : 'blue'} `}}>
                 <div
                 onClick={()=>{console.log('click')}}>Logo</div>
                 <input
