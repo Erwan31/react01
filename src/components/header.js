@@ -8,6 +8,8 @@ class Header extends React.Component {
         active: false,
     }
 
+    
+    /*
     inputChange(event) {
         const value = event.target.value === '' ? false : true;
 
@@ -17,6 +19,8 @@ class Header extends React.Component {
             keywords: event.target.value
         })
     }
+    */
+
 
     render(){
 
@@ -25,7 +29,7 @@ class Header extends React.Component {
                 <div
                 onClick={()=>{console.log('click')}}>Logo</div>
                 <input
-                    onChange={(event) => this.inputChange(event)}
+                    onChange={ this.props.keywords }
                 />
                 <div>{this.state.title}</div>
                 <div>{this.state.keywords}</div>
